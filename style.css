@@ -29,6 +29,7 @@ header{
     background-color: black;
     margin: 0 auto;
     content: "";
+    transition: transform .3s ease;
     
 }
 .hambuger span::after{
@@ -225,6 +226,23 @@ main{
 @media screen and (min-width: 375px) and (max-width: 768px){
     nav{
         display: none;
+        position: absolute;
+        left: 0;
+        background: black;
+        width: 100%;
+        top: 70px;
+        flex-direction: column;
+        padding: 10px;
+        gap: 20px;
+        align-items: flex-start;
+        transition: 3s ease;
+    }
+    ul{
+        flex-direction: column;
+       
+    }
+    .navbar.open{
+        display: flex;
     }
     .content h2{
         font-size: 2.5rem;
@@ -236,7 +254,7 @@ main{
         grid-template-columns: 1fr;
     }
     .voice{
-        top: 89%;
+        bottom: -80%;
     }
     .voice div{
         width: 50px;
