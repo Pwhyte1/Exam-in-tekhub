@@ -1,0 +1,273 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+header{
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+     align-items: center;
+}
+.hambuger{
+    display: none;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid gray;
+    border-radius: 8px;
+}
+.hambuger span, .hambuger span::after, .hambuger span::before{
+    display: block;
+    position: relative;
+    width: 25px;
+    height: 2px;
+    background-color: black;
+    margin: 0 auto;
+    content: "";
+    
+}
+.hambuger span::after{
+    position: absolute;
+    top: 6px;
+    content: "";
+}
+.hambuger.active span::after{
+    transform: translateY(-6px) rotate(-45deg);
+}
+.hambuger.active span{
+    background: transparent;
+}
+.hambuger.active span::before{
+    transform: translateY(6px) rotate(45deg);
+}
+
+.hambuger span::before{
+    position: absolute;
+    top: -6px;
+    content: "";
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+ul{
+    margin-right: 100px;
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+ul a{
+    text-decoration: none;
+    font-size: 18px;
+    color: gray;
+}
+nav{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 150px;
+}
+.btn{
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: orange;
+    border: none;
+    border-radius: 20px;
+    color: white;
+}
+main{
+    padding: 20px 7%;
+}
+.hero-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: center;
+}
+.hero-content img{
+    width: 100%;
+    position: relative;
+    border-radius: 20px;
+}
+.ai{
+    background: plum;
+    color: black;
+    display: inline-block;
+    padding: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.content h2{
+    font-size:5.5rem;
+
+}
+.content span{
+    color: orangered;
+}
+.content p{
+    font-size: 20px;
+    color: gray;
+    line-height: 1.4;
+}
+.boxs{
+    margin-top: 50px;
+    gap: 30px;
+    line-height: 1.5;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.boxs p{
+    margin-bottom: 20px;
+}
+.Pinai{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    background: orangered;
+    color: white;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 20px;
+    margin-top: 20px;
+
+}
+.voice{
+    gap: 20px;
+    align-items: center;
+    position: absolute;
+    display: flex;
+    top: 77%;
+    right: 14%;
+}
+.voice div{
+    width: 100px;
+    height: 100px;
+    background:orange;
+    border-radius: 50%;
+    color: white;
+    display: flex
+    ;
+    align-items: center;
+    justify-content: center;
+}
+.voice div:nth-child(4){
+    background: red;
+}
+.voice img{
+    width: 50px;
+}
+
+.contversation{
+    margin-top: 20px;
+   border-top: 1px solid rgb(226, 222, 222);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.box{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-right: 10px;
+    border-right: 1px solid gray;
+}
+.box p{
+    color: gray;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    border-radius: 20px;
+}
+.cards .card img{
+    width: 100%;
+    
+
+}
+.learn{
+    display: flex;
+    align-items: center;
+}
+.learn img{
+    background: orangered;
+    padding: 20px;
+    border-radius: 50%;
+}
+#use-pinai{
+    margin-top: 50px;
+}
+#use-pinai .h2{
+    font-size: 4rem;
+}
+#use-pinai .p{
+    color: plum;
+}
+.box2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (min-width: 375px) and (max-width: 768px){
+    nav{
+        display: none;
+    }
+    .content h2{
+        font-size: 2.5rem;
+    }
+    .content p{
+        font-size: 14px;
+    }
+    .hero-content{
+        grid-template-columns: 1fr;
+    }
+    .voice{
+        top: 89%;
+    }
+    .voice div{
+        width: 50px;
+        height: 50px;
+    }
+    .voice img{
+        width: 30px;
+    }
+
+    main{
+        padding: 10px;
+        width: 100%;
+    }
+    .contversation{
+        grid-template-columns: 1fr;
+        padding-top: 20px;
+        gap: 30px;
+    }
+    .box{
+        border: none;
+    }
+    .cards{
+        grid-template-columns: 1fr;
+    }
+    header{
+        padding: 10px;
+    }
+    .hambuger{
+        display: block;
+    }
+    .boxs{
+        grid-template-columns: 1fr;
+    }
+}
